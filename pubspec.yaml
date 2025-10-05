@@ -1,6 +1,6 @@
 name: biologreen_flutter_sdk
 description: The official Flutter SDK for the BioLogreen Facial Authentication API.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/AtuhurraSolomon/biologreen-flutter-sdk
 
 environment:
