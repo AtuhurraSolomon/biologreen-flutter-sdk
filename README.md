@@ -39,6 +39,12 @@ dartimport 'package:biologreen_flutter_sdk/biologreen_flutter_sdk.dart';
 final client = BioLogreenClient(apiKey: 'your_api_key'); (always put in in the environemt) this api is got from your dashboard on biologreen.com
 await client.initialize(); // Starts front camera + detection
 
+## Example
+A complete demo app is in the [example/](example/) folder. Run it with:
+cd example
+flutter pub get
+flutter run
+
 
 
 
