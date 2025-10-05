@@ -21,7 +21,7 @@ dependencies:
   http: ^1.2.1
 
   # Crucial for correctly handling device rotation
-  native_device_orientation: 2.0.3
+  native_device_orientation: ^2.0.3
 
 dev_dependencies:
   flutter_test:
