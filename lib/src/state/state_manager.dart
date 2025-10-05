@@ -30,5 +30,4 @@ class BioLogreenStateManager extends ChangeNotifier {
     _error = value;
     notifyListeners();
   }
-
 }

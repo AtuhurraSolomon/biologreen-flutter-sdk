@@ -25,7 +25,6 @@ class FaceAuthResponse {
   }
 }
 
-
 // --- Custom Exception ---
 // This makes error handling specific and robust for the developer using the SDK.
 
@@ -39,7 +38,6 @@ class BioLogreenApiException implements Exception {
   @override
   String toString() => 'BioLogreenApiException (Status $statusCode): $message';
 }
-
 
 // --- API Service ---
 // This class encapsulates all network logic.
@@ -94,20 +92,21 @@ class ApiService {
       if (response.statusCode >= 400) {
         // If the server returns an error, parse the 'detail' message
         // and throw our robust, custom exception.
-        final errorMessage = responseBody['detail'] ?? 'An unknown API error occurred.';
+        final errorMessage =
+            responseBody['detail'] ?? 'An unknown API error occurred.';
         throw BioLogreenApiException(errorMessage, response.statusCode);
       }
 
       // If successful, parse the response into our data model.
       return FaceAuthResponse.fromJson(responseBody);
-
     } catch (e) {
       // Re-throw our known API exceptions, otherwise wrap the error for clarity.
       if (e is BioLogreenApiException) {
         rethrow;
       }
       // This catches lower-level issues like network errors or JSON parsing failures.
-      throw Exception('Failed to communicate with the BioLogreen API: ${e.toString()}');
+      throw Exception(
+          'Failed to communicate with the BioLogreen API: ${e.toString()}');
     }
   }
 }

@@ -15,5 +15,5 @@ export 'src/biologreen_client.dart';
 export 'src/state/state_manager.dart';
 
 // Export the core data models and custom exceptions for robust, type-safe code.
-export 'src/services/api_service.dart' show FaceAuthResponse, BioLogreenApiException;
-
+export 'src/services/api_service.dart'
+    show FaceAuthResponse, BioLogreenApiException;

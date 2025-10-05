@@ -26,7 +26,8 @@ class FaceDetectionService {
   FaceDetectionService()
       : _faceDetector = FaceDetector(
           options: FaceDetectorOptions(
-            performanceMode: FaceDetectorMode.fast, // Use fast mode for real-time detection
+            performanceMode:
+                FaceDetectorMode.fast, // Use fast mode for real-time detection
           ),
         );
 
@@ -40,7 +41,8 @@ class FaceDetectionService {
     _isDetecting = true;
 
     // Use the definitive conversion logic to create an InputImage
-    final inputImage = await _inputImageFromCameraImage(image, cameraDescription);
+    final inputImage =
+        await _inputImageFromCameraImage(image, cameraDescription);
     if (inputImage == null) {
       _isDetecting = false;
       return;
@@ -81,7 +83,8 @@ class FaceDetectionService {
     CameraDescription camera,
   ) async {
     // Get the device's current orientation
-    final deviceOrientation = await NativeDeviceOrientationCommunicator().orientation(useSensor: true);
+    final deviceOrientation = await NativeDeviceOrientationCommunicator()
+        .orientation(useSensor: true);
     final deviceRotation = _orientationToDegrees(deviceOrientation);
 
     // Calculate the rotation compensation
@@ -103,7 +106,7 @@ class FaceDetectionService {
     // Dynamically get format from image, but force NV21 for Android camera (yuv420 output)
     InputImageFormat format;
     if (Platform.isAndroid) {
-      format = InputImageFormat.nv21;  // Matches camera's NV21 output
+      format = InputImageFormat.nv21; // Matches camera's NV21 output
     } else {
       format = InputImageFormat.bgra8888;
     }

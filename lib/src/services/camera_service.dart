@@ -13,7 +13,8 @@ class CameraService {
   bool _isDisposed = false;
 
   // A StreamController to broadcast the camera image stream to listeners.
-  final StreamController<CameraImage> _imageStreamController = StreamController.broadcast();
+  final StreamController<CameraImage> _imageStreamController =
+      StreamController.broadcast();
 
   /// A public stream of camera images that other services can listen to.
   Stream<CameraImage> get imageStream => _imageStreamController.stream;

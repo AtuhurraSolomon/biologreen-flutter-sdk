@@ -44,7 +44,10 @@ class BioLogreenClient {
     ApiService? apiService,
   })  : _cameraService = cameraService ?? CameraService(),
         _faceDetectionService = faceDetectionService ?? FaceDetectionService(),
-        _apiService = apiService ?? ApiService(apiKey: apiKey, baseUrl: baseUrl ?? 'https://api.biologreen.com/v1'),
+        _apiService = apiService ??
+            ApiService(
+                apiKey: apiKey,
+                baseUrl: baseUrl ?? 'https://api.biologreen.com/v1'),
         state = BioLogreenStateManager();
 
   /// Initializes the SDK.
@@ -83,9 +86,11 @@ class BioLogreenClient {
 
   /// Initiates a face signup attempt.
   /// Returns a `Future` that completes with the API response once a stable face is captured.
-  Future<FaceAuthResponse> signupWithFace({Map<String, dynamic>? customFields}) {
+  Future<FaceAuthResponse> signupWithFace(
+      {Map<String, dynamic>? customFields}) {
     if (state.isLoading) {
-      return Future.error(Exception("An authentication process is already in progress."));
+      return Future.error(
+          Exception("An authentication process is already in progress."));
     }
     _captureMode = 'signup';
     _signupCustomFields = customFields;
@@ -97,7 +102,8 @@ class BioLogreenClient {
   /// Returns a `Future` that completes with the API response once a stable face is captured.
   Future<FaceAuthResponse> loginWithFace() {
     if (state.isLoading) {
-      return Future.error(Exception("An authentication process is already in progress."));
+      return Future.error(
+          Exception("An authentication process is already in progress."));
     }
     _captureMode = 'login';
     _signupCustomFields = null;
