@@ -1,0 +1,95 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+# Libraries should not include pubspec.lock, per https://dart.dev/guides/libraries/private-files#pubspeclock.
+/pubspec.lock
+**/doc/api/
+.dart_tool/
+.flutter-plugins-dependencies
+/build/
+/coverage/
+
+
+Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+The pub cache may be locked if you install packages from the command line.
+These should never be committed into version control as changing this
+file will make your build unreproducible. It is better to run
+"flutter pub get" again (this will auto-resolve dependencies).
+.pub-cache/
+.pub/
+Symbolication related files
+.app.dSYM/
+.soy/
+build/
+Obfuscation related files
+app.*.symbols
+Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-deps
+.pubspec.lock
+build/
+Android related
+/android//GeneratedPluginRegistrant.java
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+/android//GeneratedPluginRegistrant.java
+iOS/XCode related
+/ios//.mode1v3
+/ios//.mode2v3
+/ios//.moved-aside
+/ios//.pbxuser
+/ios//.perspectivev3
+/ios//.xcuserstate
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.config
+**/ios/ServiceDefinitions.json
+*/ios/Runner/GeneratedPluginRegistrant.
+Exceptions to above rules.
+!/packages/flutter_tools/gradle/**/src/main/kotlin/*.kt
+!/.packages

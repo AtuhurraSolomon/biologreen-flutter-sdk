@@ -1,0 +1,29 @@
+name: biologreen_flutter_sdk
+description: The official Flutter SDK for the BioLogreen Facial Authentication API.
+version: 1.0.0
+homepage: https://github.com/AtuhurraSolomon/biologreen-flutter-sdk
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # The official Flutter plugin for camera access
+  camera: ^0.11.0+1
+
+  # Google's ML Kit package for on-device face detection
+  google_mlkit_face_detection: ^0.13.0
+
+  # The standard Dart package for making HTTP requests
+  http: ^1.2.1
+
+  # Crucial for correctly handling device rotation
+  native_device_orientation: 2.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
